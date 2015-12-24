@@ -71,6 +71,7 @@ class LevelCell: UICollectionViewCell {
         
     }
     
+    // Required to implement, but never used.
     required init?(coder aDecoder: NSCoder) {
         
         super.init(coder: aDecoder)

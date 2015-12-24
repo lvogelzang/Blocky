@@ -11,9 +11,9 @@ import SceneKit
 
 class Scene6Controller: SceneController {
     
-    required init (levelViewController: LevelViewController, sceneNumber: Int) {
+    required init (mainViewController: MainViewController, sceneNumber: Int) {
         
-        super.init(levelViewController: levelViewController, sceneNumber: sceneNumber)
+        super.init(mainViewController: mainViewController, sceneNumber: sceneNumber)
         
         let pattern0 = [("E", 0.5), ("E", 0.5), ("E", 0.5), ("W", 0.5), ("W", 0.5), ("W", 0.5)]
         let enemy0 = Enemy(enemyNumber: 0, startLocation: (0,1), animationPattern: pattern0)

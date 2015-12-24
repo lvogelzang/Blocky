@@ -11,9 +11,9 @@ import SceneKit
 
 class Scene7Controller: SceneController {
     
-    required init (levelViewController: LevelViewController, sceneNumber: Int) {
+    required init (mainViewController: MainViewController, sceneNumber: Int) {
         
-        super.init(levelViewController: levelViewController, sceneNumber: sceneNumber)
+        super.init(mainViewController: mainViewController, sceneNumber: sceneNumber)
         
         cameraFollowsBlock = false
         

@@ -9,10 +9,10 @@
 import UIKit
 import SceneKit
 
-// Utility class for getting default block animations
+// Utility class for getting default block animations.
 class Animations: NSObject {
    
-    // Return default move animation for a block: move, rotate and jump animations combined
+    // Return default move animation for a block: move, rotate and jump animations combined.
     class func getDefaultBlockAnimation(direction direction: Direction, duration: Double) -> SCNAction {
         
         let move = getDefaultMove(direction: direction, duration: duration)
@@ -23,7 +23,7 @@ class Animations: NSObject {
         
     }
     
-    // Get default move animation, without jump or rotation
+    // Get default move animation, without jump or rotation.
     class func getDefaultMove(direction direction: Direction, duration: Double) -> SCNAction {
         
         var xMove:CFloat = 0
@@ -48,7 +48,7 @@ class Animations: NSObject {
         
     }
     
-    // Get rotation animation for default block animation
+    // Get rotation animation for default block animation.
     private class func getDefaultRotation(direction direction: Direction, duration: Double) -> SCNAction {
         
         var xMove:CFloat = 0
@@ -78,7 +78,7 @@ class Animations: NSObject {
         
     }
     
-    // Get jump animation for default block animation
+    // Get jump animation for default block animation.
     private class func getDefaultJump(duration: Double) -> SCNAction {
         
         let jumpVector = SCNVector3Make(0, 0, 0.5)
