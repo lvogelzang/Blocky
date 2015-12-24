@@ -15,11 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
         
-        Database.failedScene(1)
-        Database.failedScene(1)
-        print(Database.getTriesForScene(1))
-        
         return true
+    
     }
     
     func applicationWillResignActive(application: UIApplication) {

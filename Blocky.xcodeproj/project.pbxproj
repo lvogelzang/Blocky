@@ -19,7 +19,7 @@
 		A92455D119C6288000B661F1 /* Scene19Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92455D019C6288000B661F1 /* Scene19Controller.swift */; };
 		A929B05F19A273980059AB1C /* LevelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A929B05E19A273980059AB1C /* LevelCell.swift */; };
 		A9368FB71976844E00A9BC7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9368FB61976844E00A9BC7D /* AppDelegate.swift */; };
-		A9368FB91976844E00A9BC7D /* LevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9368FB81976844E00A9BC7D /* LevelViewController.swift */; };
+		A9368FB91976844E00A9BC7D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9368FB81976844E00A9BC7D /* MainViewController.swift */; };
 		A9368FBC1976844E00A9BC7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9368FBA1976844E00A9BC7D /* Main.storyboard */; };
 		A9368FBE1976844E00A9BC7D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9368FBD1976844E00A9BC7D /* Images.xcassets */; };
 		A9368FCA1976844E00A9BC7D /* BlockyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9368FC91976844E00A9BC7D /* BlockyTests.swift */; };
@@ -84,7 +84,7 @@
 		A9368FB11976844E00A9BC7D /* Blocky.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blocky.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9368FB51976844E00A9BC7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9368FB61976844E00A9BC7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A9368FB81976844E00A9BC7D /* LevelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelViewController.swift; sourceTree = "<group>"; };
+		A9368FB81976844E00A9BC7D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		A9368FBB1976844E00A9BC7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A9368FBD1976844E00A9BC7D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A9368FC31976844E00A9BC7D /* BlockyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlockyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -206,8 +206,7 @@
 			children = (
 				A9368FB61976844E00A9BC7D /* AppDelegate.swift */,
 				A9368FBA1976844E00A9BC7D /* Main.storyboard */,
-				A9368FB81976844E00A9BC7D /* LevelViewController.swift */,
-				A929B05E19A273980059AB1C /* LevelCell.swift */,
+				A9368FB81976844E00A9BC7D /* MainViewController.swift */,
 				A9A2E84B1C2C04E70024781D /* MenuViewController.swift */,
 				A9368FBD1976844E00A9BC7D /* Images.xcassets */,
 				A966F4DF198CEEA900AE3D80 /* Scenes */,
@@ -219,6 +218,7 @@
 		A9368FB41976844E00A9BC7D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A929B05E19A273980059AB1C /* LevelCell.swift */,
 				A96B93301B7E2568006C2642 /* Blocky-Bridging-Header.h */,
 				A90B3A661C29953700E074D6 /* libsqlite3.0.tbd */,
 				A90B3A681C29DA3900E074D6 /* TriesDatabase.sql */,
@@ -556,7 +556,7 @@
 				A94D7AED198D20010022C5C8 /* Scene4Controller.swift in Sources */,
 				A989BE5319A7613E005B1E14 /* Scene12Controller.swift in Sources */,
 				A966F4EB198D027600AE3D80 /* SceneController.swift in Sources */,
-				A9368FB91976844E00A9BC7D /* LevelViewController.swift in Sources */,
+				A9368FB91976844E00A9BC7D /* MainViewController.swift in Sources */,
 				A929B05F19A273980059AB1C /* LevelCell.swift in Sources */,
 				A9DC3EF1199F758F00CF2068 /* Scene8Controller.swift in Sources */,
 				A9368FB71976844E00A9BC7D /* AppDelegate.swift in Sources */,

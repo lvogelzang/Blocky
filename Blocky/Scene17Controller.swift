@@ -11,9 +11,9 @@ import SceneKit
 
 class Scene17Controller: SceneController {
     
-    required init (levelViewController: LevelViewController, sceneNumber: Int) {
+    required init (mainViewController: MainViewController, sceneNumber: Int) {
         
-        super.init(levelViewController: levelViewController, sceneNumber: sceneNumber)
+        super.init(mainViewController: mainViewController, sceneNumber: sceneNumber)
         
         let tiles = [[0,0,0,0,1,1,1,0],[0,0,0,0,1,0,1,0],[1,1,1,1,1,1,1,1],[0,1,0,1,0,0,0,0],[0,1,1,1,0,0,0,0]]
         

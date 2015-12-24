@@ -12,7 +12,7 @@ import SceneKit
 class SceneController: NSObject {
     
     // Scene related values filled in constructor
-    let levelViewController: LevelViewController
+    let mainViewController: MainViewController
     let sceneNumber: Int
     var scene: SCNScene
     
@@ -27,9 +27,9 @@ class SceneController: NSObject {
     var foods: [Food]?
     
     // Initializes scene controller, does not yet load scene
-    required init (levelViewController: LevelViewController, sceneNumber: Int) {
+    required init (mainViewController: MainViewController, sceneNumber: Int) {
         
-        self.levelViewController = levelViewController
+        self.mainViewController = mainViewController
         self.sceneNumber = sceneNumber
         self.scene = SCNScene(named: "Scene\(sceneNumber)")!
         

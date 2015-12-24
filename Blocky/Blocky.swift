@@ -126,7 +126,7 @@ class Blocky: Block, SCNPhysicsContactDelegate {
     func win() {
         
         won = true
-        sceneController!.levelViewController.toggleMenu()
+        sceneController!.mainViewController.toggleMenu()
         
     }
     

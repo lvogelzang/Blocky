@@ -33,12 +33,12 @@ class SceneFactory: NSObject {
     }
     
     // Create a scene for the specified level.
-    class func createScene(levelViewController: LevelViewController, level: Int) -> SceneController {
+    class func createScene(mainViewController: MainViewController, level: Int) -> SceneController {
         
         let sceneNumber = SceneFactory.sceneForLevel(level)
         let className = "Blocky.Scene\(sceneNumber)Controller"
         let controllerClass = NSClassFromString(className) as! SceneController.Type
-        let controller = controllerClass.init(levelViewController: levelViewController, sceneNumber: sceneNumber)
+        let controller = controllerClass.init(mainViewController: mainViewController, sceneNumber: sceneNumber)
         
         controller.load()
         
