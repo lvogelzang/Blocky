@@ -15,31 +15,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
         
-        // TODO: let databaseName = "TriesDatabase.sql"
-        
-        Database.createDatabaseIfNotExist()
-        
-        // TODO. Wrong
-        Database.increaseTriesForScene(1)
+        Database.failedScene(1)
+        Database.failedScene(1)
+        print(Database.getTriesForScene(1))
         
         return true
     }
-    
-    /*- (void) updateStep5ForForm:(SKForm *)skform {
-    sqlite3 *database;
-    if (sqlite3_open([databasePath UTF8String], &database) == SQLITE_OK) {
-    const char *sqlStatement = (const char*)[[NSString stringWithFormat:@"UPDATE step5 SET skid = '%d', measurement = '%@', url1 = '%@', maintainingaction = '%@', url2 = '%@' WHERE skid = %d;", skform.skformid, skform.step5.measurement, skform.step5.result, skform.step5.maintainingAction, skform.step5.jobcard, skform.skformid] UTF8String];
-    sqlite3_stmt *compiledStatement;
-    if(sqlite3_prepare_v2(database, sqlStatement, -1, &compiledStatement, NULL) == SQLITE_OK) {
-    sqlite3_step(compiledStatement);
-    }
-    sqlite3_finalize(compiledStatement);
-    }
-    sqlite3_close(database);
-    }*/
-    
-    
-    
     
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

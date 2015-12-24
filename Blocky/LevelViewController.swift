@@ -24,13 +24,10 @@ class LevelViewController: UIViewController, UICollectionViewDelegate, UICollect
         loadLevel(0)
         
         levelCollectionView.registerClass(LevelCell.self, forCellWithReuseIdentifier: "levelCell")
-        levelCollectionView.registerClass(LevelPackHeaderView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "levelPackHeaderView")
-        levelCollectionView.registerClass(LevelPackHeaderView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: "levelPackHeaderView")
         levelCollectionView.backgroundColor = UIColor(white: 1.0, alpha: 0.0)
         levelCollectionView.selectItemAtIndexPath(NSIndexPath(forItem: 0, inSection: 0), animated: false, scrollPosition: UICollectionViewScrollPosition.CenteredVertically)
         
         let layout = UICollectionViewFlowLayout()
-        //layout.headerReferenceSize = CGSizeMake(0, 65)
         layout.sectionInset = UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 15)
         layout.itemSize = CGSizeMake(60, 60)
         layout.minimumInteritemSpacing = 5
@@ -107,16 +104,6 @@ class LevelViewController: UIViewController, UICollectionViewDelegate, UICollect
         loadLevel(indexPath.item)
         
     }
-    
-/*    func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
-        
-        let header = collectionView.dequeueReusableSupplementaryViewOfKind(UICollectionElementKindSectionHeader, withReuseIdentifier: "levelPackHeaderView", forIndexPath: indexPath) as! LevelPackHeaderView
-        
-        header.label.text = "Levels:"
-        
-        return header
-        
-    }*/
     
     @IBAction func play(sender: AnyObject) {
         

@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Lodewijck Vogelzang. All rights reserved.
 //
 
-// Enumerator for block move directions
+// Enumerator for block move directions.
 enum Direction {
     case North
     case East
