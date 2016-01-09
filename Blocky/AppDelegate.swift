@@ -19,14 +19,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     }
     
-    // Pause game when app becomes inactive by pressing home button or temporary interruptions
+    // Pause game when app becomes inactive by pressing home button or temporary interruptions.
     func applicationWillResignActive(application: UIApplication) {
 
         if let mainViewController = window?.rootViewController as? MainViewController {
-            mainViewController.toggleMenu()
+            mainViewController.setMenuHidden(true)
         }
         
     }
 
 }
-

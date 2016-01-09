@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Lodewijck Vogelzang. All rights reserved.
 //
 
-import UIKit
+/*import UIKit
 import SceneKit
 
 class Scene7Controller: SceneController {
@@ -32,3 +32,4 @@ class Scene7Controller: SceneController {
     }
     
 }
+*/

@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Lodewijck Vogelzang. All rights reserved.
 //
 
-import UIKit
+/*import UIKit
 
 class Scene18Controller: SceneController {
     
@@ -56,4 +56,4 @@ class Scene18Controller: SceneController {
         
     }
     
-}
+}*/

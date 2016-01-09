@@ -9,30 +9,20 @@
 import UIKit
 import SceneKit
 
-class Enemy: Block {
+class Enemy: NSObject, Block {
    
     var animationPattern: [(String, Double)]
     var enemyNumber: Int
+    var startLocation: (Int, Int)
+    var node: SCNNode?
     
     init(enemyNumber: Int, startLocation: (Int, Int), animationPattern: [(String, Double)]) {
         
         self.enemyNumber = enemyNumber
         self.animationPattern = animationPattern
-        
-        super.init()
-        
         self.startLocation = startLocation
         
-    }
-    
-    override func load(sceneController: SceneController) {
-        
-        super.load(sceneController)
-        
-        node = getNodeNamed("Enemy\(enemyNumber)")
-        node!.physicsBody = createBoxPhysicsBody(categoryBitMask: 2, collisionBitMask: 1)
-        
-        addAnimation()
+        super.init()
         
     }
     
@@ -46,10 +36,10 @@ class Enemy: Block {
             
             switch(directionCharacter) {
                 
-            case "N": actions.append(Animations.getDefaultBlockAnimation(direction: Direction.North, duration: duration))
-            case "E": actions.append(Animations.getDefaultBlockAnimation(direction: Direction.East, duration: duration))
-            case "S": actions.append(Animations.getDefaultBlockAnimation(direction: Direction.South, duration: duration))
-            case "W": actions.append(Animations.getDefaultBlockAnimation(direction: Direction.West, duration: duration))
+            case "N": actions.append(AnimationFactory.getDefaultBlockAnimation(direction: Direction.North, duration: duration))
+            case "E": actions.append(AnimationFactory.getDefaultBlockAnimation(direction: Direction.East, duration: duration))
+            case "S": actions.append(AnimationFactory.getDefaultBlockAnimation(direction: Direction.South, duration: duration))
+            case "W": actions.append(AnimationFactory.getDefaultBlockAnimation(direction: Direction.West, duration: duration))
             case "H": actions.append(SCNAction.waitForDuration(duration))
             default: break
                 
@@ -66,10 +56,9 @@ class Enemy: Block {
         
     }
     
-    override func reset() {
+    func reset() {
         
-        super.reset()
-        
+        self.resetNodeLocation(node!, startLocation: startLocation)
         addAnimation()
         
     }

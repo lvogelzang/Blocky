@@ -7,22 +7,23 @@
 //
 
 import UIKit
-import SceneKit
 
-class Scene5Controller: SceneController {
+final class Level5: Level {
     
-    required init (mainViewController: MainViewController, sceneNumber: Int) {
-        
-        super.init(mainViewController: mainViewController, sceneNumber: sceneNumber)
-        
-        self.cameraFollowsBlock = false
+    let levelNumber = 5
+    var tiles = [[1,1,1,1,1],[0,0,1,0,0],[0,0,1,0,0]]
+    let cameraFollowsBlock = false
+    
+    let blocky: Blocky
+    let enemies: [Enemy]
+    let foods: [Food]
+    
+    init() {
         
         let pattern0 = [("S", 0.5), ("S", 0.5), ("N", 0.5), ("N", 0.5)]
         let enemy0 = Enemy(enemyNumber: 0, startLocation: (2,2), animationPattern: pattern0)
         
-        let tiles = [[1,1,1,1,1],[0,0,1,0,0],[0,0,1,0,0]]
-        
-        blocky = Blocky(tiles: tiles, startLocation: (0,0), endLocation: (4,0))
+        blocky =  Blocky(startLocation: (0,0), endLocation: (4,0))
         enemies = [enemy0]
         foods = []
         

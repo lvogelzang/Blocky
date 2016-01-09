@@ -9,41 +9,23 @@
 import UIKit
 import SceneKit
 
-class Food: Block {
+class Food: NSObject, Block {
     
-    let foodNumber: Int!
+    internal let foodNumber: Int
+    internal var eaten: Bool { return node!.hidden }
+    internal var node: SCNNode?
    
-    init(foodNumber: Int, startLocation: (Int, Int)) {
+    init(foodNumber: Int) {
         
         self.foodNumber = foodNumber
         
         super.init()
         
-        self.startLocation = startLocation
-        
     }
     
-    override func load(sceneController: SceneController) {
+    func reset() {
         
-        super.load(sceneController)
-        
-        node = getNodeNamed("Food\(foodNumber)")
-        node!.physicsBody = createBoxPhysicsBody(categoryBitMask: 3, collisionBitMask: 1)
-        
-    }
-    
-    // Returns default cube as physics body
-    override func createBoxPhysicsBody(categoryBitMask categoryBitMask: Int, collisionBitMask: Int) -> SCNPhysicsBody {
-        
-        let blockBox = SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0)
-        let blockPhysicsShape = SCNPhysicsShape(geometry: blockBox, options: nil)
-        
-        let body = SCNPhysicsBody(type: SCNPhysicsBodyType.Kinematic, shape: blockPhysicsShape)
-        
-        body.categoryBitMask = categoryBitMask
-        body.collisionBitMask = collisionBitMask
-        
-        return body
+        node!.hidden = false
         
     }
     

@@ -9,62 +9,29 @@
 import UIKit
 import SceneKit
 
-// Superclass for Blocky and Enemy
-class Block: NSObject {
+// Protocol for game bodies like Blocky, Enemy and Food.
+protocol Block {
     
-    var startLocation = (0, 0)
-    var sceneController: SceneController?
-    var node: SCNNode?
+    func reset()
     
-    // Set scene controller after it is subclassed
-    func load(sceneController: SceneController) {
-        
-        self.sceneController = sceneController
-        
-    }
+}
+
+extension Block {
     
-    // Remove all pointers so that ARC can deallocate
-    func unload() {
-        
-        sceneController = nil
-    }
-    
-    // Reset scene, used when retrying after died, puts block subclass back
-    func reset() {
+    // Reset scene, used when retrying after died, puts block subclass back.
+    func resetNodeLocation(node: SCNNode, startLocation: (Int, Int)) {
         
         let (startX, startY) = startLocation
-        let xBy = Float(startX) - node!.position.x
-        let yBy = Float(startY) - node!.position.y
-        let zBy = 0.4 - node!.position.z
+        let xBy = Float(startX) - node.position.x
+        let yBy = Float(startY) - node.position.y
+        let zBy = 0.4 - node.position.z
         
         let moveAnimation = SCNAction.moveBy(SCNVector3Make(xBy, yBy, zBy), duration: 0)
         let rotationAnimation = SCNAction.rotateToAxisAngle(SCNVector4Zero, duration: 0)
         let backAnimation = SCNAction.group([moveAnimation, rotationAnimation])
         
-        node!.removeAllActions()
-        node!.runAction(backAnimation)
-        
-    }
-    
-    // Returns default cube as physics body
-    func createBoxPhysicsBody(categoryBitMask categoryBitMask: Int, collisionBitMask: Int) -> SCNPhysicsBody {
-        
-        let blockBox = SCNBox(width: 0.8, height: 0.8, length: 0.8, chamferRadius: 0)
-        let blockPhysicsShape = SCNPhysicsShape(geometry: blockBox, options: nil)
-        
-        let body = SCNPhysicsBody(type: SCNPhysicsBodyType.Kinematic, shape: blockPhysicsShape)
-        
-        body.categoryBitMask = categoryBitMask
-        body.collisionBitMask = collisionBitMask
-        
-        return body
-        
-    }
-    
-    // Returns node with given name from currently loaded scene
-    func getNodeNamed(name: String) -> SCNNode {
-        
-        return sceneController!.scene.rootNode.childNodeWithName(name, recursively: false)!
+        node.removeAllActions()
+        node.runAction(backAnimation)
         
     }
     

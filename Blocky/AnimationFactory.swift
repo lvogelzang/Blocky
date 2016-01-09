@@ -10,10 +10,10 @@ import UIKit
 import SceneKit
 
 // Utility class for getting default block animations.
-class Animations: NSObject {
+class AnimationFactory: NSObject {
    
     // Return default move animation for a block: move, rotate and jump animations combined.
-    class func getDefaultBlockAnimation(direction direction: Direction, duration: Double) -> SCNAction {
+    internal class func getDefaultBlockAnimation(direction direction: Direction, duration: Double) -> SCNAction {
         
         let move = getDefaultMove(direction: direction, duration: duration)
         let rotation = getDefaultRotation(direction: direction, duration: duration)
@@ -24,7 +24,7 @@ class Animations: NSObject {
     }
     
     // Get default move animation, without jump or rotation.
-    class func getDefaultMove(direction direction: Direction, duration: Double) -> SCNAction {
+    internal class func getDefaultMove(direction direction: Direction, duration: Double) -> SCNAction {
         
         var xMove:CFloat = 0
         var yMove:CFloat = 0

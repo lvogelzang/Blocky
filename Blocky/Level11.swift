@@ -7,17 +7,18 @@
 //
 
 import UIKit
-import SceneKit
 
-class Scene11Controller: SceneController {
+final class Level11: Level {
     
-    required init (mainViewController: MainViewController, sceneNumber: Int) {
-        
-        super.init(mainViewController: mainViewController, sceneNumber: sceneNumber)
-        
-        cameraFollowsBlock = false
-        
-        let tiles = [[1,1,1,1,1,1,1,1], [0,1,1,1,1,1,1,0], [0,1,1,1,1,1,1,0], [0,1,1,1,1,1,1,0], [0,1,1,1,1,1,1,0]]
+    let levelNumber = 11
+    var tiles = [[1,1,1,1,1,1,1,1], [0,1,1,1,1,1,1,0], [0,1,1,1,1,1,1,0], [0,1,1,1,1,1,1,0], [0,1,1,1,1,1,1,0]]
+    let cameraFollowsBlock = false
+    
+    let blocky: Blocky
+    let enemies: [Enemy]
+    let foods: [Food]
+    
+    init() {
         
         let pattern0 = [("S", 0.5), ("S", 0.5), ("S", 0.5), ("S", 0.5), ("N", 0.5), ("N", 0.5), ("N", 0.5), ("N", 0.5)]
         let pattern1 = [("N", 0.5), ("N", 0.5), ("N", 0.5), ("N", 0.5), ("S", 0.5), ("S", 0.5), ("S", 0.5), ("S", 0.5)]
@@ -29,7 +30,7 @@ class Scene11Controller: SceneController {
         let enemy4 = Enemy(enemyNumber: 4, startLocation: (5,4), animationPattern: pattern0)
         let enemy5 = Enemy(enemyNumber: 5, startLocation: (6,0), animationPattern: pattern1)
         
-        blocky = Blocky(tiles: tiles, startLocation: (0,0), endLocation: (7,0))
+        blocky =  Blocky(startLocation: (0,0), endLocation: (7,0))
         enemies = [enemy0, enemy1, enemy2, enemy3, enemy4, enemy5]
         foods = []
         

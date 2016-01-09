@@ -14,43 +14,43 @@ class Database: NSObject {
     
     // MARK: - Public functions
     
-    // Called after player won a scene. Resets number of tries, and recalculates best score.
-    class func wonScene(number: Int) {
+    // Called after player won a level. Resets number of tries, and recalculates best score.
+    class func wonLevel(level: Int) {
         
-        let triesForScene = Database.getTriesForScene(number)
-        var bestForScene = Database.getBestForScene(number)
+        let triesForLevel = Database.getTriesForLevel(level)
+        var bestForLevel = Database.getBestForLevel(level)
         
-        if (triesForScene + 1 < bestForScene) {
-            bestForScene = triesForScene + 1
+        if (triesForLevel < bestForLevel) {
+            bestForLevel = triesForLevel
         }
         
-        let wonStatement = "update tries set tries = 0, best = \(bestForScene) where scene = \(number);"
-        Database.executeSQLStatementForScene(number, statement: wonStatement)
+        let wonStatement = "update tries set tries = 0, best = \(bestForLevel) where level = \(level);"
+        Database.executeSQLStatementForLevel(level, statement: wonStatement)
         
     }
     
-    // Increases number of tries for scene.
-    class func failedScene(number: Int) {
+    // Increment tries for specified level.
+    class func incrementTriesForLevel(level: Int) {
         
-        let triesForScene = Database.getTriesForScene(number)
-        let increaseTriesStatement = "update tries set tries = \(triesForScene+1) where scene = \(number);"
-        Database.executeSQLStatementForScene(number, statement: increaseTriesStatement)
-        
-    }
-    
-    // Gets the amount of tries in the current streak for a scene.
-    class func getTriesForScene(number: Int) -> Int {
-        
-        let getTriesStatement = "select tries from tries where scene = \(number)"
-        return Database.executeSQLStatementForScene(number, statement: getTriesStatement)
+        let triesForLevel = Database.getTriesForLevel(level)
+        let increaseTriesStatement = "update tries set tries = \(triesForLevel+1) where level = \(level);"
+        Database.executeSQLStatementForLevel(level, statement: increaseTriesStatement)
         
     }
     
-    // Gets the minimum amount of tries needed for a scene.
-    class func getBestForScene(number: Int) -> Int {
+    // Gets the amount of tries in the current streak for a level.
+    class func getTriesForLevel(level: Int) -> Int {
         
-        let getBestStatement = "select best from tries where scene = \(number)"
-        return Database.executeSQLStatementForScene(number, statement: getBestStatement)
+        let getTriesStatement = "select tries from tries where level = \(level)"
+        return Database.executeSQLStatementForLevel(level, statement: getTriesStatement)
+        
+    }
+    
+    // Gets the minimum amount of tries needed for a level.
+    class func getBestForLevel(level: Int) -> Int {
+        
+        let getBestStatement = "select best from tries where level = \(level)"
+        return Database.executeSQLStatementForLevel(level, statement: getBestStatement)
         
     }
     
@@ -58,19 +58,19 @@ class Database: NSObject {
     
     // First private method called when using the database.
     // Executes a SQL statement without verifying.
-    // Creates scene if scene is not known in database yet.
-    // Creates database if scene does not exist yet.
+    // Creates database if database does not exist yet.
+    // Creates level if level is not known in database yet.
     // Returns first result of query if result is not empty.
-    private class func executeSQLStatementForScene(number: Int, statement: String) -> Int {
+    private class func executeSQLStatementForLevel(level: Int, statement: String) -> Int {
         
         Database.createDatabaseIfNotExist()
-        Database.createSceneIfNotExist(number)
+        Database.createLevelIfNotExist(level)
         return Database.executeSQLStatement(statement)
         
     }
     
     // Creates a SQL database with an empty table called tries if not exist yet. Built like:
-    // Create table tries(scene smallint primary key, tries smallint, best smallint);
+    // Create table tries(level smallint primary key, tries smallint, best smallint);
     private class func createDatabaseIfNotExist() {
         
         let databasePath = Database.getDatabasePath()
@@ -100,15 +100,15 @@ class Database: NSObject {
         
     }
     
-    // Creates a new row for scene if not exist with 0 tries and best 999.
-    class func createSceneIfNotExist(number: Int) {
+    // Creates a new row for level if not exist with 0 tries and best 999.
+    class func createLevelIfNotExist(level: Int) {
         
-        let countStatement = "select count(scene) from tries where scene = \(number);"
-        let rowsForScene = Database.executeSQLStatement(countStatement)
+        let countStatement = "select count(level) from tries where level = \(level);"
+        let rowsForLevel = Database.executeSQLStatement(countStatement)
         
-        if (rowsForScene == 0) {
+        if (rowsForLevel == 0) {
             
-            let createStatement = "insert into tries (scene, tries, best) values (\(number), 0, 999);"
+            let createStatement = "insert into tries (level, tries, best) values (\(level), 0, 999);"
             Database.executeSQLStatement(createStatement)
             
         }
