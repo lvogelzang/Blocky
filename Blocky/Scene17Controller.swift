@@ -6,16 +6,19 @@
 //  Copyright (c) 2014 Lodewijck Vogelzang. All rights reserved.
 //
 
-/*import UIKit
-import SceneKit
+import UIKit
 
-class Scene17Controller: SceneController {
+final class Level17: Level {
     
-    required init (mainViewController: MainViewController, sceneNumber: Int) {
-        
-        super.init(mainViewController: mainViewController, sceneNumber: sceneNumber)
-        
-        let tiles = [[0,0,0,0,1,1,1,0],[0,0,0,0,1,0,1,0],[1,1,1,1,1,1,1,1],[0,1,0,1,0,0,0,0],[0,1,1,1,0,0,0,0]]
+    let levelNumber = 17
+    var tiles = [[0,0,0,0,1,1,1,0],[0,0,0,0,1,0,1,0],[1,1,1,1,1,1,1,1],[0,1,0,1,0,0,0,0],[0,1,1,1,0,0,0,0]]
+    let cameraFollowsBlock = true
+    
+    let blocky: Blocky
+    let enemies: [Enemy]
+    let foods: [Food]
+    
+    init() {
         
         let speed0 = 0.35
         
@@ -25,10 +28,10 @@ class Scene17Controller: SceneController {
         let enemy0 = Enemy(enemyNumber: 0, startLocation: (4,2), animationPattern: pattern0)
         let enemy1 = Enemy(enemyNumber: 1, startLocation: (1,2), animationPattern: pattern1)
         
-        blocky = Blocky(tiles: tiles, startLocation: (7,2), endLocation: (0,2))
+        blocky = Blocky(startLocation: (7,2), endLocation: (0,2))
         enemies = [enemy0, enemy1]
         foods = []
         
     }
     
-}*/
+}

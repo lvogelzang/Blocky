@@ -7,15 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A9080BC0199D0A5900BA37C4 /* Scene7Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9080BBF199D0A5900BA37C4 /* Scene7Controller.swift */; };
+		A9080BC0199D0A5900BA37C4 /* Level7.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9080BBF199D0A5900BA37C4 /* Level7.swift */; };
 		A9080BC2199D281800BA37C4 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9080BC1199D281800BA37C4 /* Food.swift */; };
 		A90915A8198D435A00F33EED /* Level5.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90915A7198D435A00F33EED /* Level5.swift */; };
 		A90B24D91C2D9A5700C0D32A /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90B24D81C2D9A5700C0D32A /* Level.swift */; };
 		A90B3A671C29953700E074D6 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A90B3A661C29953700E074D6 /* libsqlite3.0.tbd */; };
+		A91A31C01C428D2E0047F189 /* Control.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91A31BF1C428D2E0047F189 /* Control.swift */; };
 		A91F3C7919C5DA6C003E1388 /* Scene18.dae in Resources */ = {isa = PBXBuildFile; fileRef = A91F3C7819C5DA6C003E1388 /* Scene18.dae */; };
-		A91F3C7C19C5DB0B003E1388 /* Scene18Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91F3C7B19C5DB0B003E1388 /* Scene18Controller.swift */; };
+		A91F3C7C19C5DB0B003E1388 /* Level18.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91F3C7B19C5DB0B003E1388 /* Level18.swift */; };
 		A92455CE19C6286400B661F1 /* Scene19.dae in Resources */ = {isa = PBXBuildFile; fileRef = A92455CD19C6286400B661F1 /* Scene19.dae */; };
-		A92455D119C6288000B661F1 /* Scene19Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92455D019C6288000B661F1 /* Scene19Controller.swift */; };
+		A92455D119C6288000B661F1 /* Level19.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92455D019C6288000B661F1 /* Level19.swift */; };
 		A929B05F19A273980059AB1C /* LevelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A929B05E19A273980059AB1C /* LevelCell.swift */; };
 		A9368FB71976844E00A9BC7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9368FB61976844E00A9BC7D /* AppDelegate.swift */; };
 		A9368FB91976844E00A9BC7D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9368FB81976844E00A9BC7D /* MainViewController.swift */; };
@@ -28,15 +29,15 @@
 		A966F4EB198D027600AE3D80 /* SceneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A966F4EA198D027600AE3D80 /* SceneController.swift */; };
 		A96B932F1B7E2486006C2642 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96B932E1B7E2486006C2642 /* Database.swift */; };
 		A989BE5019A76114005B1E14 /* Scene12.dae in Resources */ = {isa = PBXBuildFile; fileRef = A989BE4F19A76114005B1E14 /* Scene12.dae */; };
-		A989BE5319A7613E005B1E14 /* Scene12Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = A989BE5219A7613E005B1E14 /* Scene12Controller.swift */; };
+		A989BE5319A7613E005B1E14 /* Level12.swift in Sources */ = {isa = PBXBuildFile; fileRef = A989BE5219A7613E005B1E14 /* Level12.swift */; };
 		A989BE5519A769C6005B1E14 /* Scene13.dae in Resources */ = {isa = PBXBuildFile; fileRef = A989BE5419A769C6005B1E14 /* Scene13.dae */; };
-		A989BE5819A769E1005B1E14 /* Scene13Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = A989BE5719A769E1005B1E14 /* Scene13Controller.swift */; };
+		A989BE5819A769E1005B1E14 /* Level13.swift in Sources */ = {isa = PBXBuildFile; fileRef = A989BE5719A769E1005B1E14 /* Level13.swift */; };
 		A989BE5A19A77061005B1E14 /* Scene14.dae in Resources */ = {isa = PBXBuildFile; fileRef = A989BE5919A77061005B1E14 /* Scene14.dae */; };
-		A989BE5D19A7707E005B1E14 /* Scene14Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = A989BE5C19A7707E005B1E14 /* Scene14Controller.swift */; };
+		A989BE5D19A7707E005B1E14 /* Level14.swift in Sources */ = {isa = PBXBuildFile; fileRef = A989BE5C19A7707E005B1E14 /* Level14.swift */; };
 		A989BE6119A77D4F005B1E14 /* Scene15.dae in Resources */ = {isa = PBXBuildFile; fileRef = A989BE6019A77D4F005B1E14 /* Scene15.dae */; };
-		A989BE6519A77D74005B1E14 /* Scene15Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = A989BE6419A77D74005B1E14 /* Scene15Controller.swift */; };
+		A989BE6519A77D74005B1E14 /* Level15.swift in Sources */ = {isa = PBXBuildFile; fileRef = A989BE6419A77D74005B1E14 /* Level15.swift */; };
 		A989BE6719A78CF3005B1E14 /* Scene16.dae in Resources */ = {isa = PBXBuildFile; fileRef = A989BE6619A78CF3005B1E14 /* Scene16.dae */; };
-		A989BE6A19A78D0A005B1E14 /* Scene16Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = A989BE6919A78D0A005B1E14 /* Scene16Controller.swift */; };
+		A989BE6A19A78D0A005B1E14 /* Level16.swift in Sources */ = {isa = PBXBuildFile; fileRef = A989BE6919A78D0A005B1E14 /* Level16.swift */; };
 		A989BE6C19A7B278005B1E14 /* Scene17.dae in Resources */ = {isa = PBXBuildFile; fileRef = A989BE6B19A7B278005B1E14 /* Scene17.dae */; };
 		A989BE6F19A7B30F005B1E14 /* Scene17Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = A989BE6E19A7B30F005B1E14 /* Scene17Controller.swift */; };
 		A997853E19A0A5AA00ACAE69 /* Level9.swift in Sources */ = {isa = PBXBuildFile; fileRef = A997853D19A0A5AA00ACAE69 /* Level9.swift */; };
@@ -57,7 +58,7 @@
 		A9CA150219A3D68A003DA92A /* Scene9.dae in Resources */ = {isa = PBXBuildFile; fileRef = A9CA150119A3D68A003DA92A /* Scene9.dae */; };
 		A9CA150419A3D695003DA92A /* Scene10.dae in Resources */ = {isa = PBXBuildFile; fileRef = A9CA150319A3D695003DA92A /* Scene10.dae */; };
 		A9CA150619A3D69C003DA92A /* Scene11.dae in Resources */ = {isa = PBXBuildFile; fileRef = A9CA150519A3D69C003DA92A /* Scene11.dae */; };
-		A9DC3EF1199F758F00CF2068 /* Scene8Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DC3EF0199F758F00CF2068 /* Scene8Controller.swift */; };
+		A9DC3EF1199F758F00CF2068 /* Level8.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DC3EF0199F758F00CF2068 /* Level8.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,15 +72,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A9080BBF199D0A5900BA37C4 /* Scene7Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scene7Controller.swift; sourceTree = "<group>"; };
+		A9080BBF199D0A5900BA37C4 /* Level7.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level7.swift; sourceTree = "<group>"; };
 		A9080BC1199D281800BA37C4 /* Food.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		A90915A7198D435A00F33EED /* Level5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level5.swift; sourceTree = "<group>"; };
 		A90B24D81C2D9A5700C0D32A /* Level.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 		A90B3A661C29953700E074D6 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		A91A31BF1C428D2E0047F189 /* Control.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Control.swift; sourceTree = "<group>"; };
 		A91F3C7819C5DA6C003E1388 /* Scene18.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; name = Scene18.dae; path = Resources/Scenes/Scene18.dae; sourceTree = SOURCE_ROOT; };
-		A91F3C7B19C5DB0B003E1388 /* Scene18Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scene18Controller.swift; sourceTree = "<group>"; };
+		A91F3C7B19C5DB0B003E1388 /* Level18.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level18.swift; sourceTree = "<group>"; };
 		A92455CD19C6286400B661F1 /* Scene19.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; name = Scene19.dae; path = Resources/Scenes/Scene19.dae; sourceTree = SOURCE_ROOT; };
-		A92455D019C6288000B661F1 /* Scene19Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scene19Controller.swift; sourceTree = "<group>"; };
+		A92455D019C6288000B661F1 /* Level19.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level19.swift; sourceTree = "<group>"; };
 		A929B05E19A273980059AB1C /* LevelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelCell.swift; sourceTree = "<group>"; };
 		A9368FB11976844E00A9BC7D /* Blocky.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blocky.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9368FB51976844E00A9BC7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -97,15 +99,15 @@
 		A96B932E1B7E2486006C2642 /* Database.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		A96B93301B7E2568006C2642 /* Blocky-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Blocky-Bridging-Header.h"; sourceTree = "<group>"; };
 		A989BE4F19A76114005B1E14 /* Scene12.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; name = Scene12.dae; path = Resources/Scenes/Scene12.dae; sourceTree = SOURCE_ROOT; };
-		A989BE5219A7613E005B1E14 /* Scene12Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scene12Controller.swift; sourceTree = "<group>"; };
+		A989BE5219A7613E005B1E14 /* Level12.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level12.swift; sourceTree = "<group>"; };
 		A989BE5419A769C6005B1E14 /* Scene13.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; name = Scene13.dae; path = Resources/Scenes/Scene13.dae; sourceTree = SOURCE_ROOT; };
-		A989BE5719A769E1005B1E14 /* Scene13Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scene13Controller.swift; sourceTree = "<group>"; };
+		A989BE5719A769E1005B1E14 /* Level13.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level13.swift; sourceTree = "<group>"; };
 		A989BE5919A77061005B1E14 /* Scene14.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; name = Scene14.dae; path = Resources/Scenes/Scene14.dae; sourceTree = SOURCE_ROOT; };
-		A989BE5C19A7707E005B1E14 /* Scene14Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scene14Controller.swift; sourceTree = "<group>"; };
+		A989BE5C19A7707E005B1E14 /* Level14.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level14.swift; sourceTree = "<group>"; };
 		A989BE6019A77D4F005B1E14 /* Scene15.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; name = Scene15.dae; path = Resources/Scenes/Scene15.dae; sourceTree = SOURCE_ROOT; };
-		A989BE6419A77D74005B1E14 /* Scene15Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scene15Controller.swift; sourceTree = "<group>"; };
+		A989BE6419A77D74005B1E14 /* Level15.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level15.swift; sourceTree = "<group>"; };
 		A989BE6619A78CF3005B1E14 /* Scene16.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; name = Scene16.dae; path = Resources/Scenes/Scene16.dae; sourceTree = SOURCE_ROOT; };
-		A989BE6919A78D0A005B1E14 /* Scene16Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scene16Controller.swift; sourceTree = "<group>"; };
+		A989BE6919A78D0A005B1E14 /* Level16.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level16.swift; sourceTree = "<group>"; };
 		A989BE6B19A7B278005B1E14 /* Scene17.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; name = Scene17.dae; path = Resources/Scenes/Scene17.dae; sourceTree = SOURCE_ROOT; };
 		A989BE6E19A7B30F005B1E14 /* Scene17Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scene17Controller.swift; sourceTree = "<group>"; };
 		A997853D19A0A5AA00ACAE69 /* Level9.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level9.swift; sourceTree = "<group>"; };
@@ -125,7 +127,7 @@
 		A9CA150119A3D68A003DA92A /* Scene9.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; name = Scene9.dae; path = Resources/Scenes/Scene9.dae; sourceTree = SOURCE_ROOT; };
 		A9CA150319A3D695003DA92A /* Scene10.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; name = Scene10.dae; path = Resources/Scenes/Scene10.dae; sourceTree = SOURCE_ROOT; };
 		A9CA150519A3D69C003DA92A /* Scene11.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; name = Scene11.dae; path = Resources/Scenes/Scene11.dae; sourceTree = SOURCE_ROOT; };
-		A9DC3EF0199F758F00CF2068 /* Scene8Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scene8Controller.swift; sourceTree = "<group>"; };
+		A9DC3EF0199F758F00CF2068 /* Level8.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level8.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,7 +152,7 @@
 		A9080BBE199D0A3B00BA37C4 /* Scene7 */ = {
 			isa = PBXGroup;
 			children = (
-				A9080BBF199D0A5900BA37C4 /* Scene7Controller.swift */,
+				A9080BBF199D0A5900BA37C4 /* Level7.swift */,
 				A9CA14FD19A3D67C003DA92A /* Scene7.dae */,
 			);
 			name = Scene7;
@@ -168,7 +170,7 @@
 		A91F3C7A19C5DA71003E1388 /* Scene18 */ = {
 			isa = PBXGroup;
 			children = (
-				A91F3C7B19C5DB0B003E1388 /* Scene18Controller.swift */,
+				A91F3C7B19C5DB0B003E1388 /* Level18.swift */,
 				A91F3C7819C5DA6C003E1388 /* Scene18.dae */,
 			);
 			name = Scene18;
@@ -177,7 +179,7 @@
 		A92455CF19C6286900B661F1 /* Scene19 */ = {
 			isa = PBXGroup;
 			children = (
-				A92455D019C6288000B661F1 /* Scene19Controller.swift */,
+				A92455D019C6288000B661F1 /* Level19.swift */,
 				A92455CD19C6286400B661F1 /* Scene19.dae */,
 			);
 			name = Scene19;
@@ -217,6 +219,7 @@
 		A9368FB41976844E00A9BC7D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A91A31BF1C428D2E0047F189 /* Control.swift */,
 				A929B05E19A273980059AB1C /* LevelCell.swift */,
 				A96B93301B7E2568006C2642 /* Blocky-Bridging-Header.h */,
 				A90B3A661C29953700E074D6 /* libsqlite3.0.tbd */,
@@ -283,7 +286,7 @@
 		A989BE5119A76119005B1E14 /* Scene12 */ = {
 			isa = PBXGroup;
 			children = (
-				A989BE5219A7613E005B1E14 /* Scene12Controller.swift */,
+				A989BE5219A7613E005B1E14 /* Level12.swift */,
 				A989BE4F19A76114005B1E14 /* Scene12.dae */,
 			);
 			name = Scene12;
@@ -292,7 +295,7 @@
 		A989BE5619A769C9005B1E14 /* Scene13 */ = {
 			isa = PBXGroup;
 			children = (
-				A989BE5719A769E1005B1E14 /* Scene13Controller.swift */,
+				A989BE5719A769E1005B1E14 /* Level13.swift */,
 				A989BE5419A769C6005B1E14 /* Scene13.dae */,
 			);
 			name = Scene13;
@@ -301,7 +304,7 @@
 		A989BE5B19A77065005B1E14 /* Scene14 */ = {
 			isa = PBXGroup;
 			children = (
-				A989BE5C19A7707E005B1E14 /* Scene14Controller.swift */,
+				A989BE5C19A7707E005B1E14 /* Level14.swift */,
 				A989BE5919A77061005B1E14 /* Scene14.dae */,
 			);
 			name = Scene14;
@@ -336,7 +339,7 @@
 		A989BE6219A77D51005B1E14 /* Scene15 */ = {
 			isa = PBXGroup;
 			children = (
-				A989BE6419A77D74005B1E14 /* Scene15Controller.swift */,
+				A989BE6419A77D74005B1E14 /* Level15.swift */,
 				A989BE6019A77D4F005B1E14 /* Scene15.dae */,
 			);
 			name = Scene15;
@@ -356,7 +359,7 @@
 		A989BE6819A78CF9005B1E14 /* Scene16 */ = {
 			isa = PBXGroup;
 			children = (
-				A989BE6919A78D0A005B1E14 /* Scene16Controller.swift */,
+				A989BE6919A78D0A005B1E14 /* Level16.swift */,
 				A989BE6619A78CF3005B1E14 /* Scene16.dae */,
 			);
 			name = Scene16;
@@ -410,7 +413,7 @@
 		A9DC3EEF199F757700CF2068 /* Scene8 */ = {
 			isa = PBXGroup;
 			children = (
-				A9DC3EF0199F758F00CF2068 /* Scene8Controller.swift */,
+				A9DC3EF0199F758F00CF2068 /* Level8.swift */,
 				A9CA14FF19A3D682003DA92A /* Scene8.dae */,
 			);
 			name = Scene8;
@@ -539,8 +542,8 @@
 				A96B932F1B7E2486006C2642 /* Database.swift in Sources */,
 				A9B2B4501993F5FE00D79B05 /* Enemy.swift in Sources */,
 				A90B24D91C2D9A5700C0D32A /* Level.swift in Sources */,
-				A9080BC0199D0A5900BA37C4 /* Scene7Controller.swift in Sources */,
-				A92455D119C6288000B661F1 /* Scene19Controller.swift in Sources */,
+				A9080BC0199D0A5900BA37C4 /* Level7.swift in Sources */,
+				A92455D119C6288000B661F1 /* Level19.swift in Sources */,
 				A9080BC2199D281800BA37C4 /* Food.swift in Sources */,
 				A90915A8198D435A00F33EED /* Level5.swift in Sources */,
 				A997854819A1014000ACAE69 /* Level11.swift in Sources */,
@@ -548,22 +551,23 @@
 				A966F4DE198CEE1000AE3D80 /* SceneFactory.swift in Sources */,
 				A989BE6F19A7B30F005B1E14 /* Scene17Controller.swift in Sources */,
 				A9B2B47F1994378800D79B05 /* AnimationFactory.swift in Sources */,
-				A91F3C7C19C5DB0B003E1388 /* Scene18Controller.swift in Sources */,
+				A91F3C7C19C5DB0B003E1388 /* Level18.swift in Sources */,
 				A997854319A0AD1700ACAE69 /* Level10.swift in Sources */,
-				A989BE6519A77D74005B1E14 /* Scene15Controller.swift in Sources */,
-				A989BE6A19A78D0A005B1E14 /* Scene16Controller.swift in Sources */,
+				A989BE6519A77D74005B1E14 /* Level15.swift in Sources */,
+				A989BE6A19A78D0A005B1E14 /* Level16.swift in Sources */,
 				A997853E19A0A5AA00ACAE69 /* Level9.swift in Sources */,
+				A91A31C01C428D2E0047F189 /* Control.swift in Sources */,
 				A94D7AED198D20010022C5C8 /* Level4.swift in Sources */,
-				A989BE5319A7613E005B1E14 /* Scene12Controller.swift in Sources */,
+				A989BE5319A7613E005B1E14 /* Level12.swift in Sources */,
 				A966F4EB198D027600AE3D80 /* SceneController.swift in Sources */,
 				A9368FB91976844E00A9BC7D /* MainViewController.swift in Sources */,
 				A929B05F19A273980059AB1C /* LevelCell.swift in Sources */,
-				A9DC3EF1199F758F00CF2068 /* Scene8Controller.swift in Sources */,
+				A9DC3EF1199F758F00CF2068 /* Level8.swift in Sources */,
 				A9368FB71976844E00A9BC7D /* AppDelegate.swift in Sources */,
 				A9B2B4521993FBB300D79B05 /* Block.swift in Sources */,
 				A9368FE119768A0D00A9BC7D /* Direction.swift in Sources */,
-				A989BE5819A769E1005B1E14 /* Scene13Controller.swift in Sources */,
-				A989BE5D19A7707E005B1E14 /* Scene14Controller.swift in Sources */,
+				A989BE5819A769E1005B1E14 /* Level13.swift in Sources */,
+				A989BE5D19A7707E005B1E14 /* Level14.swift in Sources */,
 				A9AAF0EB199A6BE200689F9D /* Level6.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -686,11 +690,13 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Blocky/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Lovo-Creations.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Blocky/Blocky-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -702,10 +708,12 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Blocky/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Lovo-Creations.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Blocky/Blocky-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

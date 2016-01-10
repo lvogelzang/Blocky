@@ -44,7 +44,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DPR-9V-x8G">
                                 <rect key="frame" x="120" y="189" width="360" height="222"/>
                                 <subviews>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="RC6-AN-lv0">
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="RC6-AN-lv0">
                                         <rect key="frame" x="0.0" y="0.0" width="222" height="222"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="222" id="DFh-yO-u55"/>
@@ -104,8 +104,10 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="RC6-AN-lv0" firstAttribute="leading" secondItem="DPR-9V-x8G" secondAttribute="leading" id="0PW-He-MHj"/>
                                     <constraint firstAttribute="height" constant="222" id="Mk3-0X-SZj"/>
                                     <constraint firstAttribute="width" constant="360" id="dKq-cb-Fcm"/>
+                                    <constraint firstItem="RC6-AN-lv0" firstAttribute="top" secondItem="DPR-9V-x8G" secondAttribute="top" id="q5j-1O-euU"/>
                                 </constraints>
                             </view>
                         </subviews>

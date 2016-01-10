@@ -6,18 +6,19 @@
 //  Copyright (c) 2014 Lodewijck Vogelzang. All rights reserved.
 //
 
-/*import UIKit
-import SceneKit
+import UIKit
 
-class Scene13Controller: SceneController {
+final class Level13: Level {
     
-    required init (mainViewController: MainViewController, sceneNumber: Int) {
-        
-        super.init(mainViewController: mainViewController, sceneNumber: sceneNumber)
-        
-        cameraFollowsBlock = false
-        
-        let tiles = [[0,1,1,1,1,1,0],[0,1,1,1,1,1,0],[1,1,1,1,1,1,1],[0,1,1,1,1,1,0],[0,1,1,1,1,1,0]]
+    let levelNumber = 13
+    var tiles = [[0,1,1,1,1,1,0],[0,1,1,1,1,1,0],[1,1,1,1,1,1,1],[0,1,1,1,1,1,0],[0,1,1,1,1,1,0]]
+    let cameraFollowsBlock = false
+    
+    let blocky: Blocky
+    let enemies: [Enemy]
+    let foods: [Food]
+    
+    init() {
         
         let speed1 = 1.0
         let speed2 = 0.8
@@ -33,16 +34,16 @@ class Scene13Controller: SceneController {
         let enemy3 = Enemy(enemyNumber: 3, startLocation: (4,4), animationPattern: pattern1)
         let enemy4 = Enemy(enemyNumber: 4, startLocation: (5,4), animationPattern: pattern0)
         
-        let food0 = Food(foodNumber: 0, startLocation: (1,2))
-        let food1 = Food(foodNumber: 1, startLocation: (2,2))
-        let food2 = Food(foodNumber: 2, startLocation: (3,2))
-        let food3 = Food(foodNumber: 3, startLocation: (4,2))
-        let food4 = Food(foodNumber: 4, startLocation: (5,2))
+        let food0 = Food(foodNumber: 0)
+        let food1 = Food(foodNumber: 1)
+        let food2 = Food(foodNumber: 2)
+        let food3 = Food(foodNumber: 3)
+        let food4 = Food(foodNumber: 4)
         
-        blocky = Blocky(tiles: tiles, startLocation: (0,2), endLocation: (6,2))
+        blocky = Blocky(startLocation: (0,2), endLocation: (6,2))
         enemies = [enemy0, enemy1, enemy2, enemy3, enemy4]
         foods = [food0, food1, food2, food3, food4]
         
     }
     
-}*/
+}

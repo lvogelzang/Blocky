@@ -15,6 +15,7 @@ class SceneController: NSObject, SCNPhysicsContactDelegate {
     var level: Level
     let scene: SCNScene
     let cameraStartPosition: SCNVector3
+    var lastControl: Control?
     
     var won: Bool = false
     
@@ -100,46 +101,57 @@ class SceneController: NSObject, SCNPhysicsContactDelegate {
     // Handles pan as default game control gesture.
     internal func handlePan(gestureRecognizer: UIGestureRecognizer) {
         
-        if (level.blocky.isAnimating == false) {
-            
-            let panGesture = gestureRecognizer as! UIPanGestureRecognizer
-            let velocity = panGesture.velocityInView(gestureRecognizer.view)
-            let direction = pangestureToDirection(velocity)
-            
-            if (canMoveInDirection(direction)) {
-                
-                breakTileIfNeeded()
-                level.blocky.location = newLocation(level.blocky.location, direction: direction)
-                move(direction)
-                
-            }
-            
-        }
-        
-    }
-    
-    // Determines in which direction is panned.
-    internal func pangestureToDirection(panVelocity: CGPoint) -> Direction {
-        
-        let xVelocity = panVelocity.x
-        let yVelocity = panVelocity.y
+        let panGesture = gestureRecognizer as! UIPanGestureRecognizer
+        let velocity = panGesture.velocityInView(gestureRecognizer.view)
+        let xVelocity = velocity.x
+        let yVelocity = velocity.y
+        var direction:Direction = .North
         
         // If horizontal movement is bigger.
         if (abs(xVelocity) > abs(yVelocity)) {
             if (xVelocity > 0) {
-                return Direction.East
+                direction = .East
             } else {
-                return Direction.West
+                direction = .West
             }
         }
             
-        // If vertical movement is bigger.
+            // If vertical movement is bigger.
         else {
             if (yVelocity < 0) {
-                return Direction.North
+                direction = .North
             } else {
-                return Direction.South
+                direction = .South
             }
+        }
+        
+        lastControl = Control(direction: direction, timestamp: NSDate())
+        checkForMove()
+        
+    }
+    
+    // Perform move if not animating yet, move was played and move is possible.
+    private func checkForMove() {
+        
+        if (level.blocky.isAnimating == false) {
+            
+            if let control = lastControl {
+                
+                let threshold = NSDate(timeInterval: -0.2, sinceDate: NSDate())
+                if control.timestamp.compare(threshold) == NSComparisonResult.OrderedDescending {
+                    
+                    if canMoveInDirection(control.direction) {
+                        
+                        breakTileIfNeeded()
+                        level.blocky.location = newLocation(level.blocky.location, direction: control.direction)
+                        move(control.direction)
+                        
+                    }
+                    
+                }
+                
+            }
+            
         }
         
     }
@@ -219,10 +231,13 @@ class SceneController: NSObject, SCNPhysicsContactDelegate {
                 if (ateAllFoods == true) {
                     
                     self.win()
+                    return
                     
                 }
                 
             }
+            
+            self.checkForMove()
             
         })
         
