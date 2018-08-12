@@ -21,7 +21,7 @@ final class Level7: Level {
     init() {
         
         let pattern0 = [("E", 0.5), ("E", 0.5), ("W", 0.5), ("W", 0.5)]
-        let enemy0 = Enemy(enemyNumber: 0, startLocation: (0,1), animationPattern: pattern0)
+        let enemy0 = Enemy(enemyNumber: 0, startLocation: (1,2), animationPattern: pattern0)
         
         let food0 = Food(foodNumber: 0)
         let food1 = Food(foodNumber: 1)

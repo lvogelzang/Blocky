@@ -2,12 +2,12 @@
 //  BlockyTests.swift
 //  BlockyTests
 //
-//  Created by Lodewijck Vogelzang on 16-07-14.
-//  Copyright (c) 2014 Lodewijck Vogelzang. All rights reserved.
+//  Created by Lodewijck on 11/08/2018.
+//  Copyright © 2018 Lodewijck. All rights reserved.
 //
 
-import UIKit
 import XCTest
+@testable import Blocky
 
 class BlockyTests: XCTestCase {
     
@@ -23,12 +23,12 @@ class BlockyTests: XCTestCase {
     
     func testExample() {
         // This is an example of a functional test case.
-        XCTAssert(true, "Pass")
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
     
     func testPerformanceExample() {
         // This is an example of a performance test case.
-        self.measureBlock() {
+        self.measure {
             // Put the code you want to measure the time of here.
         }
     }

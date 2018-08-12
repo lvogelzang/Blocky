@@ -28,8 +28,8 @@ final class Level15: Level {
         let pattern0 = [("N", speed0), ("H", 0.3), ("N", speed0), ("S", speed0), ("H", 0.3), ("S", speed0)]
         let pattern1 = [("S", speed0), ("H", 0.3), ("S", speed0), ("N", speed0), ("H", 0.3), ("N", speed0)]
         
-        let enemy0 = Enemy(enemyNumber: 0, startLocation: (4,1), animationPattern: pattern0)
-        let enemy1 = Enemy(enemyNumber: 1, startLocation: (5,3), animationPattern: pattern1)
+        let enemy0 = Enemy(enemyNumber: 0, startLocation: (3,1), animationPattern: pattern0)
+        let enemy1 = Enemy(enemyNumber: 1, startLocation: (4,3), animationPattern: pattern1)
         
         blocky = Blocky(startLocation: (0,2), endLocation: (0,2))
         enemies = [enemy0, enemy1]

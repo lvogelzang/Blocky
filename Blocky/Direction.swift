@@ -8,8 +8,8 @@
 
 // Enumerator for block move directions.
 enum Direction {
-    case North
-    case East
-    case South
-    case West
+    case north
+    case east
+    case south
+    case west
 }

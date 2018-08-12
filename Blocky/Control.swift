@@ -9,8 +9,6 @@
 import UIKit
 
 struct Control {
-    
     var direction: Direction
-    var timestamp: NSDate
-
+    var timestamp: Date
 }
