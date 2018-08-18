@@ -28,6 +28,8 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
     // MARK: - Initializing
     
     override func viewDidLoad() {
+        Database.initializeDatabase();
+        
         let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(MainViewController.handlePan(_:)))
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(MainViewController.handleTap(_:)))
         self.scenesContainerView.gestureRecognizers = [panGestureRecognizer, tapGestureRecognizer]
@@ -64,15 +66,15 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     // Toggle menu visibility on a tap.
     @objc internal func handleTap(_ gestureRecognizer: UIGestureRecognizer) {
-        setMenuHidden(!menuView.isHidden)
+        setMenuVisible(menuView.isHidden)
     }
     
     // Hide or unhide menu.
-    internal func setMenuHidden(_ menuHidden: Bool) {
-        sceneView.scene?.isPaused = !menuHidden
+    internal func setMenuVisible(_ menuVisible: Bool) {
+        sceneView.scene?.isPaused = menuVisible
         OperationQueue.main.addOperation({
-            self.menuView.isHidden = menuHidden
-            if (menuHidden == false) {
+            self.menuView.isHidden = !menuVisible
+            if (menuVisible) {
                 self.updateValues()
                 self.levelCollectionView.reloadData()
             }
@@ -110,7 +112,7 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     // Hide menu view on clicking play button.
     @IBAction func play(_ sender: AnyObject) {
-        setMenuHidden(true)
+        setMenuVisible(false)
     }
     
     // Disable locked levels.

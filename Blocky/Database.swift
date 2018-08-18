@@ -15,55 +15,10 @@ class Database: NSObject {
     
     // MARK: - Public functions
     
-    // Called after player won a level. Resets number of tries, and recalculates best score.
-    class func wonLevel(_ level: Int) {
-        let triesForLevel = Database.getTriesForLevel(level)
-        var bestForLevel = Database.getBestForLevel(level)
-        
-        if (triesForLevel < bestForLevel) {
-            bestForLevel = triesForLevel
-        }
-        
-        let wonStatement = "update tries set tries = 0, best = \(bestForLevel) where level = \(level);"
-        Database.executeSQLStatementForLevel(level, statement: wonStatement)
-    }
-    
-    // Increment tries for specified level.
-    class func incrementTriesForLevel(_ level: Int) {
-        let triesForLevel = Database.getTriesForLevel(level)
-        let increaseTriesStatement = "update tries set tries = \(triesForLevel+1) where level = \(level);"
-        Database.executeSQLStatementForLevel(level, statement: increaseTriesStatement)
-    }
-    
-    // Gets the amount of tries in the current streak for a level.
-    class func getTriesForLevel(_ level: Int) -> Int {
-        let getTriesStatement = "select tries from tries where level = \(level)"
-        return Database.executeSQLStatementForLevel(level, statement: getTriesStatement)
-    }
-    
-    // Gets the minimum amount of tries needed for a level.
-    class func getBestForLevel(_ level: Int) -> Int {
-        let getBestStatement = "select best from tries where level = \(level)"
-        return Database.executeSQLStatementForLevel(level, statement: getBestStatement)
-    }
-    
-    // MARK: - Private functions
-    
-    // First private method called when using the database.
-    // Executes a SQL statement without verifying.
-    // Creates database if database does not exist yet.
-    // Creates level if level is not known in database yet.
-    // Returns first result of query if result is not empty.
-    @discardableResult
-    fileprivate class func executeSQLStatementForLevel(_ level: Int, statement: String) -> Int {
-        Database.createDatabaseIfNotExist()
-        Database.createLevelIfNotExist(level)
-        return Database.executeSQLStatement(statement)
-    }
-    
     // Creates a SQL database with an empty table called tries if not exist yet. Built like:
     // Create table tries(level smallint primary key, tries smallint, best smallint);
-    fileprivate class func createDatabaseIfNotExist() {
+    // Runs database updates that are added after first release of Blocky.
+    class func initializeDatabase() {
         let databasePath = Database.getDatabasePath()
         let fileManager = FileManager()
         let databaseExists = fileManager.fileExists(atPath: databasePath)
@@ -76,6 +31,69 @@ class Database: NSObject {
                 print("Failed to copy database from bundle to app.")
             }
         }
+        
+        let updates = ["create table tutorial (executed bool)"]
+        
+        for i in 0 ..< updates.count {
+            if executeSQLStatement("select 1 from build_updates where bu_id = \(i)") == -1 {
+                executeSQLStatement(updates[i])
+                executeSQLStatement("insert into build_updates (bu_id) values (\(i))")
+            }
+        }
+    }
+    
+    class func hasCompletedTutorial() -> Bool {
+        return executeSQLStatement("select count(*) from tutorial") > 0
+    }
+    
+    class func setCompletedTutorial() {
+        executeSQLStatement("insert into tutorial (executed) values (1)")
+    }
+    
+    // Called after player won a level. Resets number of tries, and recalculates best score.
+    class func wonLevel(_ level: Int) {
+        setCompletedTutorial()
+        let triesForLevel = Database.getTriesForLevel(level)
+        var bestForLevel = Database.getBestForLevel(level)
+        
+        if (triesForLevel < bestForLevel) {
+            bestForLevel = triesForLevel
+        }
+        
+        let wonStatement = "update tries set tries = 0, best = \(bestForLevel) where level = \(level);"
+        Database.executeSQLStatement(level, statement: wonStatement)
+    }
+    
+    // Increment tries for specified level.
+    class func incrementTriesForLevel(_ level: Int) {
+        let triesForLevel = Database.getTriesForLevel(level)
+        let increaseTriesStatement = "update tries set tries = \(triesForLevel+1) where level = \(level);"
+        Database.executeSQLStatement(level, statement: increaseTriesStatement)
+    }
+    
+    // Gets the amount of tries in the current streak for a level.
+    class func getTriesForLevel(_ level: Int) -> Int {
+        let getTriesStatement = "select tries from tries where level = \(level)"
+        return Database.executeSQLStatement(level, statement: getTriesStatement)
+    }
+    
+    // Gets the minimum amount of tries needed for a level.
+    class func getBestForLevel(_ level: Int) -> Int {
+        let getBestStatement = "select best from tries where level = \(level)"
+        return Database.executeSQLStatement(level, statement: getBestStatement)
+    }
+    
+    // MARK: - Private functions
+    
+    // First private method called when using the database.
+    // Executes a SQL statement without verifying.
+    // Creates database if database does not exist yet.
+    // Creates level if level is not known in database yet.
+    // Returns first result of query if result is not empty.
+    @discardableResult
+    fileprivate class func executeSQLStatement(_ level: Int, statement: String) -> Int {
+        Database.createLevelIfNotExist(level)
+        return Database.executeSQLStatement(statement)
     }
     
     // Gets path of database containing number of tries per level.

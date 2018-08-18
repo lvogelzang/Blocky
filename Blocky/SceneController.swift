@@ -28,7 +28,7 @@ class SceneController: NSObject, SCNPhysicsContactDelegate {
         self.mainViewController = mainViewController
         self.level = level
         
-        scene = SCNScene(named: "Scene\(level.levelNumber)")!
+        scene = SCNScene(named: "Level\(level.levelNumber)")!
         cameraStartPosition = scene.rootNode.childNode(withName: "Camera", recursively: false)!.position
         
         super.init()
@@ -37,7 +37,7 @@ class SceneController: NSObject, SCNPhysicsContactDelegate {
         scene.physicsWorld.contactDelegate = self
         scene.physicsWorld.gravity = SCNVector3Zero
         
-        level.blocky.node = getNodeNamed("Block")
+        level.blocky.node = getNodeNamed("Blocky")
         level.blocky.node!.physicsBody = createBoxPhysicsBody(categoryBitMask: blockyCategory, collisionBitMask: enemyCategory | foodCategory, edge: 0.8)
         
         for enemy: Enemy in level.enemies {
@@ -257,7 +257,7 @@ class SceneController: NSObject, SCNPhysicsContactDelegate {
     func win() {
         Database.wonLevel(level.levelNumber)
         won = true
-        mainViewController.setMenuHidden(false)
+        mainViewController.setMenuVisible(true)
     }
     
     func die() {
