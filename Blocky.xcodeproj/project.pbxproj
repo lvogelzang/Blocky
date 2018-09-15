@@ -232,6 +232,9 @@
 		EDE33FB22128076E000831A5 /* Level17.dae in Resources */ = {isa = PBXBuildFile; fileRef = EDE33EFE2128076D000831A5 /* Level17.dae */; };
 		EDE33FB32128076E000831A5 /* Level47.dae in Resources */ = {isa = PBXBuildFile; fileRef = EDE33EFF2128076D000831A5 /* Level47.dae */; };
 		EDE33FB42128076E000831A5 /* Level27.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE33F002128076E000831A5 /* Level27.swift */; };
+		EDE33FB621295D2F000831A5 /* TutorialController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE33FB521295D2F000831A5 /* TutorialController.swift */; };
+		EDE33FBA21296005000831A5 /* Tutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE33FB821296005000831A5 /* Tutorial.swift */; };
+		EDE33FBB21296005000831A5 /* Tutorial.dae in Resources */ = {isa = PBXBuildFile; fileRef = EDE33FB921296005000831A5 /* Tutorial.dae */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -479,6 +482,9 @@
 		EDE33EFE2128076D000831A5 /* Level17.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = Level17.dae; sourceTree = "<group>"; };
 		EDE33EFF2128076D000831A5 /* Level47.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = Level47.dae; sourceTree = "<group>"; };
 		EDE33F002128076E000831A5 /* Level27.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level27.swift; sourceTree = "<group>"; };
+		EDE33FB521295D2F000831A5 /* TutorialController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialController.swift; sourceTree = "<group>"; };
+		EDE33FB821296005000831A5 /* Tutorial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tutorial.swift; sourceTree = "<group>"; };
+		EDE33FB921296005000831A5 /* Tutorial.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = Tutorial.dae; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -535,6 +541,7 @@
 				ED657360211F5108001C9690 /* Main.storyboard */,
 				ED6573AC211F643D001C9690 /* MainViewController.swift */,
 				ED65738B211F5706001C9690 /* SceneController.swift */,
+				EDE33FB521295D2F000831A5 /* TutorialController.swift */,
 				ED657398211F5BF1001C9690 /* Database.swift */,
 				ED65739E211F5CDE001C9690 /* AnimationFactory.swift */,
 				ED65738D211F5893001C9690 /* Scene */,
@@ -543,6 +550,7 @@
 				ED657368211F510A001C9690 /* Info.plist */,
 				ED6573A0211F5D22001C9690 /* Direction.swift */,
 				ED6573A2211F5D64001C9690 /* Control.swift */,
+				EDE33FB721295FD0000831A5 /* Tutorial */,
 				EDE1528A21207FDC00983587 /* Levels */,
 				ED6573A4211F5D7C001C9690 /* LevelCell.swift */,
 				ED6573A8211F5E1C001C9690 /* TriesDatabase.sql */,
@@ -796,6 +804,15 @@
 			path = Levels;
 			sourceTree = "<group>";
 		};
+		EDE33FB721295FD0000831A5 /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				EDE33FB921296005000831A5 /* Tutorial.dae */,
+				EDE33FB821296005000831A5 /* Tutorial.swift */,
+			);
+			path = Tutorial;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -952,6 +969,7 @@
 				EDE33F332128076E000831A5 /* Level46.dae in Resources */,
 				EDE33F022128076E000831A5 /* Level86.dae in Resources */,
 				EDE33F9D2128076E000831A5 /* Level69.dae in Resources */,
+				EDE33FBB21296005000831A5 /* Tutorial.dae in Resources */,
 				EDE33F2E2128076E000831A5 /* Level81.dae in Resources */,
 				EDE33E4321280730000831A5 /* Level7.dae in Resources */,
 				ED657362211F5108001C9690 /* Main.storyboard in Resources */,
@@ -1033,6 +1051,7 @@
 				EDE33F932128076E000831A5 /* Level99.swift in Sources */,
 				EDE33F502128076E000831A5 /* Level40.swift in Sources */,
 				EDE33F762128076E000831A5 /* Level20.swift in Sources */,
+				EDE33FB621295D2F000831A5 /* TutorialController.swift in Sources */,
 				EDE33E4621280730000831A5 /* Level5.swift in Sources */,
 				EDE33F972128076E000831A5 /* Level10.swift in Sources */,
 				EDE33F8A2128076E000831A5 /* Level36.swift in Sources */,
@@ -1066,6 +1085,7 @@
 				EDE33F7D2128076E000831A5 /* Level51.swift in Sources */,
 				EDE33F912128076E000831A5 /* Level98.swift in Sources */,
 				EDE33F2B2128076E000831A5 /* Level73.swift in Sources */,
+				EDE33FBA21296005000831A5 /* Tutorial.swift in Sources */,
 				ED413B18212493BC00EC87A6 /* Level1.swift in Sources */,
 				ED657395211F59B9001C9690 /* Food.swift in Sources */,
 				EDE33F182128076E000831A5 /* Level52.swift in Sources */,

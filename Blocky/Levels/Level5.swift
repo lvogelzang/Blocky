@@ -2,7 +2,7 @@
 //  Level5.swift
 //  Blocky
 //
-//  Created by Lodewijck Vogelzang on 18-08-18
+//  Created by Lodewijck Vogelzang on 26-08-18
 //  Copyright (c) 2018 Lodewijck Vogelzang. All rights reserved.
 //
 
@@ -11,7 +11,7 @@ import UIKit
 final class Level5: Level {
 
 	let levelNumber = 5
-	var tiles = [[0, 1, 0, 1, 0], [1, 1, 1, 1, 1], [0, 1, 0, 1, 0], [0, 1, 0, 1, 0]]
+	var tiles = [[1, 1, 1, 1, 1], [0, 1, 0, 1, 0], [0, 1, 1, 1, 0]]
 	let cameraFollowsBlock = false
 
 	let blocky: Blocky
@@ -19,15 +19,12 @@ final class Level5: Level {
 	let foods: [Food]
 
 	init() {
-		blocky = Blocky(startLocation: (0, 1), endLocation: (4, 1))
+		blocky = Blocky(startLocation: (0, 0), endLocation: (4, 0))
 
-		let pattern0 = [("S", 0.5), ("S", 0.5), ("S", 0.5), ("N", 0.5), ("N", 0.5), ("N", 0.5)]
-		let enemy0 = Enemy(enemyNumber: 0, startLocation: (1, 3), animationPattern: pattern0)
+		let pattern0 = [("E", 0.5), ("E", 0.5), ("W", 0.5), ("W", 0.5)]
+		let enemy0 = Enemy(enemyNumber: 0, startLocation: (1, 2), animationPattern: pattern0)
 		
-		let pattern1 = [("S", 0.5), ("S", 0.5), ("S", 0.5), ("N", 0.5), ("N", 0.5), ("N", 0.5)]
-		let enemy1 = Enemy(enemyNumber: 1, startLocation: (3, 3), animationPattern: pattern1)
-		
-		enemies = [enemy0, enemy1]
+		enemies = [enemy0]
 		
 		foods = []
 	}

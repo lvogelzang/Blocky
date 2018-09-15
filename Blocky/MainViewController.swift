@@ -34,7 +34,11 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(MainViewController.handleTap(_:)))
         self.scenesContainerView.gestureRecognizers = [panGestureRecognizer, tapGestureRecognizer]
         
-        loadLevel(0)
+        if (Database.hasCompletedTutorial()) {
+            loadLevel(0)
+        } else {
+            loadLevel(-1)
+        }
         
         super.viewDidLoad()
         
@@ -154,18 +158,9 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
         let tries = Database.getTriesForLevel(levelNumber)
         triesLabel.text = "Tries: \(tries)"
         
-        star1ImageView.image = UIImage(named: "Star")
-        star2ImageView.image = UIImage(named: "Star")
-        star3ImageView.image = UIImage(named: "Star")
-        if (best < 999) {
-            star1ImageView.image = UIImage(named: "StarFilled")
-        }
-        if (best < 5) {
-            star2ImageView.image = UIImage(named: "StarFilled")
-        }
-        if (best == 1) {
-            star3ImageView.image = UIImage(named: "StarFilled")
-        }
+        star1ImageView.image = UIImage(named: best < 999 ? "StarFilled" : "Star")
+        star2ImageView.image = UIImage(named: best < 5 ? "StarFilled" : "Star")
+        star3ImageView.image = UIImage(named: best == 1 ? "StarFilled" : "Star")
     }
     
     // MARK: - Collection view datasource

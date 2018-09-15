@@ -37,12 +37,20 @@ class SceneFactory: NSObject {
     
     // Create a scene for the specified level.
     class func createScene(_ mainViewController: MainViewController, levelNumber: Int) -> SceneController {
-        let sceneNumber = SceneFactory.sceneForLevel(levelNumber)
-        let className = "Blocky.Level\(sceneNumber)"
-        let levelClass = NSClassFromString(className) as! Level.Type
-        let level = levelClass.init()
-        
-        return SceneController(mainViewController: mainViewController, level: level)
+        if (levelNumber == -1) {
+            let className = "Blocky.Tutorial"
+            let levelClass = NSClassFromString(className) as! Level.Type
+            let level = levelClass.init()
+            
+            return TutorialController(mainViewController: mainViewController, level: level)
+        } else {
+            let sceneNumber = SceneFactory.sceneForLevel(levelNumber)
+            let className = "Blocky.Level\(sceneNumber)"
+            let levelClass = NSClassFromString(className) as! Level.Type
+            let level = levelClass.init()
+            
+            return SceneController(mainViewController: mainViewController, level: level)
+        }
     }
     
 }

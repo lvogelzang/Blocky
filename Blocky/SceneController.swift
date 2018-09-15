@@ -17,18 +17,18 @@ class SceneController: NSObject, SCNPhysicsContactDelegate {
     let mainViewController: MainViewController
     var level: Level
     let scene: SCNScene
-    let cameraStartPosition: SCNVector3
+    var cameraStartPosition: SCNVector3
     var lastControl: Control?
     var lastDied: Date = Date(timeIntervalSince1970: 0)
     
     var won: Bool = false
     
     // Initializes scene controller, does not yet load scene.
-    required init (mainViewController: MainViewController, level: Level) {
+    required init(mainViewController: MainViewController, level: Level) {
         self.mainViewController = mainViewController
         self.level = level
         
-        scene = SCNScene(named: "Level\(level.levelNumber)")!
+        scene = SCNScene(named: level.getSceneName())!
         cameraStartPosition = scene.rootNode.childNode(withName: "Camera", recursively: false)!.position
         
         super.init()
@@ -57,20 +57,13 @@ class SceneController: NSObject, SCNPhysicsContactDelegate {
         lastControl = nil
         level.blocky.reset()
         
-        for enemy: Enemy in level.enemies {
-            enemy.reset()
-        }
-        
         for food: Food in level.foods {
             food.reset()
         }
         
         // Animate camera back.
         if (level.cameraFollowsBlock) {
-            let camera = getNodeNamed("Camera")
-            let cameraAnimation = SCNAction.move(to: cameraStartPosition, duration: 0.2)
-            camera.removeAllActions()
-            camera.runAction(cameraAnimation)
+            moveCamera(to: cameraStartPosition)
         }
         
         // Put breakable tiles back.
@@ -190,7 +183,7 @@ class SceneController: NSObject, SCNPhysicsContactDelegate {
                     }
                 }
                 
-                if (ateAllFoods == true) {
+                if (ateAllFoods) {
                     self.win()
                     return
                 }
@@ -252,6 +245,12 @@ class SceneController: NSObject, SCNPhysicsContactDelegate {
                 contact.nodeB.isHidden = true
             }
         }
+    }
+    
+    internal func moveCamera(to: SCNVector3) {
+        let camera = getNodeNamed("Camera")
+        let cameraAnimation = SCNAction.move(to: to, duration: 0.5)
+        camera.runAction(cameraAnimation)
     }
     
     func win() {

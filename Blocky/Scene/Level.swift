@@ -17,3 +17,13 @@ protocol Level {
     
     init()
 }
+
+extension Level {
+    func getSceneName() -> String {
+        if (levelNumber == -1) {
+            return "Tutorial"
+        } else {
+            return "Level\(levelNumber)"
+        }
+    }
+}
