@@ -61,6 +61,10 @@ class SceneController: NSObject, SCNPhysicsContactDelegate {
             food.reset()
         }
         
+        for enemy: Enemy in level.enemies {
+            enemy.reset()
+        }
+        
         // Animate camera back.
         if (level.cameraFollowsBlock) {
             moveCamera(to: cameraStartPosition)
@@ -197,14 +201,19 @@ class SceneController: NSObject, SCNPhysicsContactDelegate {
             let cameraAnimation = AnimationFactory.getDefaultMove(direction: direction, duration: 0.5)
             camera.runAction(cameraAnimation)
         }
+        
+        for enemy in level.enemies {
+            enemy.stepAnimation()
+        }
+
     }
     
     // Makes tile invisble if old tile was breakable.
     fileprivate func breakTileIfNeeded() {
-//        if (level.tiles[level.blocky.location.1][level.blocky.location.0] == 2) {
-//            getNodeNamed("Tile\(level.blocky.location.0)_\(level.blocky.location.1)").isHidden = true
-//            level.tiles[level.blocky.location.1][level.blocky.location.0] = 3
-//        }
+        if (level.tiles[level.blocky.location.1][level.blocky.location.0] == 2) {
+            getNodeNamed("Tile\(level.blocky.location.0)_\(level.blocky.location.1)").isHidden = true
+            level.tiles[level.blocky.location.1][level.blocky.location.0] = 3
+        }
     }
     
     // Returns node with given name from currently loaded scene.
