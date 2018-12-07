@@ -2,7 +2,7 @@
 //  Level5.swift
 //  Blocky
 //
-//  Created by Lodewijck Vogelzang on 26-08-18
+//  Created by Lodewijck Vogelzang on 07-12-18
 //  Copyright (c) 2018 Lodewijck Vogelzang. All rights reserved.
 //
 
@@ -25,7 +25,10 @@ final class Level5: Level {
 		let enemy0 = Enemy(enemyNumber: 0, startLocation: (1, 2), animationPattern: pattern0)
 		
 		enemies = [enemy0]
-		
-		foods = []
+
+		let food0 = Food(foodNumber: 0)
+		let food1 = Food(foodNumber: 1)
+
+		foods = [food0, food1]
 	}
 }

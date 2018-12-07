@@ -2,7 +2,7 @@
 //  Level8.swift
 //  Blocky
 //
-//  Created by Lodewijck Vogelzang on 26-08-18
+//  Created by Lodewijck Vogelzang on 07-12-18
 //  Copyright (c) 2018 Lodewijck Vogelzang. All rights reserved.
 //
 
@@ -49,7 +49,7 @@ final class Level8: Level {
 		let enemy8 = Enemy(enemyNumber: 8, startLocation: (5, 3), animationPattern: pattern8)
 		
 		enemies = [enemy0, enemy1, enemy2, enemy3, enemy4, enemy5, enemy6, enemy7, enemy8]
-		
+
 		foods = []
 	}
 }

@@ -2,7 +2,7 @@
 //  Level72.swift
 //  Blocky
 //
-//  Created by Lodewijck Vogelzang on 18-08-18
+//  Created by Lodewijck Vogelzang on 07-12-18
 //  Copyright (c) 2018 Lodewijck Vogelzang. All rights reserved.
 //
 
@@ -28,7 +28,7 @@ final class Level72: Level {
 		let enemy1 = Enemy(enemyNumber: 1, startLocation: (3, 3), animationPattern: pattern1)
 		
 		enemies = [enemy0, enemy1]
-		
+
 		foods = []
 	}
 }
