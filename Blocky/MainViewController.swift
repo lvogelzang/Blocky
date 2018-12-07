@@ -53,7 +53,7 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
         // Set cells.
         levelCollectionView.register(LevelCell.self, forCellWithReuseIdentifier: "levelCell")
         levelCollectionView.backgroundColor = UIColor(white: 1.0, alpha: 0.0)
-        levelCollectionView.selectItem(at: IndexPath(item: 0, section: 0), animated: false, scrollPosition: UICollectionViewScrollPosition.centeredVertically)
+        levelCollectionView.selectItem(at: IndexPath(item: 0, section: 0), animated: false, scrollPosition: UICollectionView.ScrollPosition.centeredVertically)
         
         // Set layout.
         let layout = UICollectionViewFlowLayout()
@@ -98,7 +98,7 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
         let temp = tempSceneView
         tempSceneView = sceneView // Move current scene to back.
         sceneView = temp // Move new scene to front.
-        scenesContainerView.bringSubview(toFront: sceneView)
+        scenesContainerView.bringSubviewToFront(sceneView)
         
         // Hide first scene view.
         sceneView.alpha = 0
@@ -123,7 +123,7 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
     func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
         if cellIsDisabled((indexPath as NSIndexPath).item) {
             let index = collectionView.indexPathsForSelectedItems![0]
-            collectionView.selectItem(at: index, animated: false, scrollPosition: UICollectionViewScrollPosition())
+            collectionView.selectItem(at: index, animated: false, scrollPosition: UICollectionView.ScrollPosition())
             return false
         } else {
             return true

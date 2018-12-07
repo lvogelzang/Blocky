@@ -40,6 +40,32 @@
 		ED6573AD211F643D001C9690 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6573AC211F643D001C9690 /* MainViewController.swift */; };
 		ED6573AE211F643D001C9690 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6573AC211F643D001C9690 /* MainViewController.swift */; };
 		ED6573AF211F643D001C9690 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6573AC211F643D001C9690 /* MainViewController.swift */; };
+		ED9E732621BA820C009BA3F2 /* SceneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED65738B211F5706001C9690 /* SceneController.swift */; };
+		ED9E732721BA8211009BA3F2 /* SceneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED65738B211F5706001C9690 /* SceneController.swift */; };
+		ED9E732821BA821C009BA3F2 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED657398211F5BF1001C9690 /* Database.swift */; };
+		ED9E732921BA821D009BA3F2 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED657398211F5BF1001C9690 /* Database.swift */; };
+		ED9E732A21BA8248009BA3F2 /* SceneFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6573A6211F5DC1001C9690 /* SceneFactory.swift */; };
+		ED9E732B21BA8248009BA3F2 /* SceneFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6573A6211F5DC1001C9690 /* SceneFactory.swift */; };
+		ED9E732C21BA824B009BA3F2 /* Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED65738E211F58AC001C9690 /* Block.swift */; };
+		ED9E732D21BA824B009BA3F2 /* Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED65738E211F58AC001C9690 /* Block.swift */; };
+		ED9E732E21BA824E009BA3F2 /* Blocky.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED657390211F58D9001C9690 /* Blocky.swift */; };
+		ED9E732F21BA824E009BA3F2 /* Blocky.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED657390211F58D9001C9690 /* Blocky.swift */; };
+		ED9E733021BA8250009BA3F2 /* Enemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED657392211F597F001C9690 /* Enemy.swift */; };
+		ED9E733121BA8251009BA3F2 /* Enemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED657392211F597F001C9690 /* Enemy.swift */; };
+		ED9E733221BA8253009BA3F2 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED657394211F59B9001C9690 /* Food.swift */; };
+		ED9E733321BA8253009BA3F2 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED657394211F59B9001C9690 /* Food.swift */; };
+		ED9E733421BA8256009BA3F2 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED657396211F59CD001C9690 /* Level.swift */; };
+		ED9E733521BA8256009BA3F2 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED657396211F59CD001C9690 /* Level.swift */; };
+		ED9E733621BA8259009BA3F2 /* AnimationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED65739E211F5CDE001C9690 /* AnimationFactory.swift */; };
+		ED9E733721BA825A009BA3F2 /* AnimationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED65739E211F5CDE001C9690 /* AnimationFactory.swift */; };
+		ED9E733821BA825E009BA3F2 /* TutorialController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE33FB521295D2F000831A5 /* TutorialController.swift */; };
+		ED9E733921BA825F009BA3F2 /* TutorialController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE33FB521295D2F000831A5 /* TutorialController.swift */; };
+		ED9E733A21BA8278009BA3F2 /* Control.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6573A2211F5D64001C9690 /* Control.swift */; };
+		ED9E733B21BA8278009BA3F2 /* Control.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6573A2211F5D64001C9690 /* Control.swift */; };
+		ED9E733C21BA827B009BA3F2 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6573A0211F5D22001C9690 /* Direction.swift */; };
+		ED9E733D21BA827B009BA3F2 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6573A0211F5D22001C9690 /* Direction.swift */; };
+		ED9E733E21BA828E009BA3F2 /* LevelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6573A4211F5D7C001C9690 /* LevelCell.swift */; };
+		ED9E733F21BA828F009BA3F2 /* LevelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6573A4211F5D7C001C9690 /* LevelCell.swift */; };
 		EDE33E4121280730000831A5 /* Level6.dae in Resources */ = {isa = PBXBuildFile; fileRef = EDE33E352128072F000831A5 /* Level6.dae */; };
 		EDE33E4221280730000831A5 /* Level5.dae in Resources */ = {isa = PBXBuildFile; fileRef = EDE33E362128072F000831A5 /* Level5.dae */; };
 		EDE33E4321280730000831A5 /* Level7.dae in Resources */ = {isa = PBXBuildFile; fileRef = EDE33E372128072F000831A5 /* Level7.dae */; };
@@ -544,6 +570,7 @@
 				EDE33FB521295D2F000831A5 /* TutorialController.swift */,
 				ED657398211F5BF1001C9690 /* Database.swift */,
 				ED65739E211F5CDE001C9690 /* AnimationFactory.swift */,
+				ED6573A4211F5D7C001C9690 /* LevelCell.swift */,
 				ED65738D211F5893001C9690 /* Scene */,
 				ED657363211F510A001C9690 /* Assets.xcassets */,
 				ED657365211F510A001C9690 /* LaunchScreen.storyboard */,
@@ -552,7 +579,6 @@
 				ED6573A2211F5D64001C9690 /* Control.swift */,
 				EDE33FB721295FD0000831A5 /* Tutorial */,
 				EDE1528A21207FDC00983587 /* Levels */,
-				ED6573A4211F5D7C001C9690 /* LevelCell.swift */,
 				ED6573A8211F5E1C001C9690 /* TriesDatabase.sql */,
 			);
 			path = Blocky;
@@ -881,13 +907,16 @@
 				TargetAttributes = {
 					ED657358211F5108001C9690 = {
 						CreatedOnToolsVersion = 9.4;
+						LastSwiftMigration = 1010;
 					};
 					ED65736C211F510A001C9690 = {
 						CreatedOnToolsVersion = 9.4;
+						LastSwiftMigration = 1010;
 						TestTargetID = ED657358211F5108001C9690;
 					};
 					ED657377211F510A001C9690 = {
 						CreatedOnToolsVersion = 9.4;
+						LastSwiftMigration = 1010;
 						TestTargetID = ED657358211F5108001C9690;
 					};
 				};
@@ -1171,8 +1200,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED9E732F21BA824E009BA3F2 /* Blocky.swift in Sources */,
+				ED9E733A21BA8278009BA3F2 /* Control.swift in Sources */,
 				ED657372211F510A001C9690 /* BlockyTests.swift in Sources */,
+				ED9E733E21BA828E009BA3F2 /* LevelCell.swift in Sources */,
+				ED9E732B21BA8248009BA3F2 /* SceneFactory.swift in Sources */,
 				ED6573AE211F643D001C9690 /* MainViewController.swift in Sources */,
+				ED9E733121BA8251009BA3F2 /* Enemy.swift in Sources */,
+				ED9E733321BA8253009BA3F2 /* Food.swift in Sources */,
+				ED9E733D21BA827B009BA3F2 /* Direction.swift in Sources */,
+				ED9E733721BA825A009BA3F2 /* AnimationFactory.swift in Sources */,
+				ED9E732D21BA824B009BA3F2 /* Block.swift in Sources */,
+				ED9E732921BA821D009BA3F2 /* Database.swift in Sources */,
+				ED9E733521BA8256009BA3F2 /* Level.swift in Sources */,
+				ED9E732621BA820C009BA3F2 /* SceneController.swift in Sources */,
+				ED9E733921BA825F009BA3F2 /* TutorialController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1180,8 +1222,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED9E732E21BA824E009BA3F2 /* Blocky.swift in Sources */,
+				ED9E733B21BA8278009BA3F2 /* Control.swift in Sources */,
 				ED65737D211F510A001C9690 /* BlockyUITests.swift in Sources */,
+				ED9E733F21BA828F009BA3F2 /* LevelCell.swift in Sources */,
+				ED9E732A21BA8248009BA3F2 /* SceneFactory.swift in Sources */,
 				ED6573AF211F643D001C9690 /* MainViewController.swift in Sources */,
+				ED9E733021BA8250009BA3F2 /* Enemy.swift in Sources */,
+				ED9E733221BA8253009BA3F2 /* Food.swift in Sources */,
+				ED9E733C21BA827B009BA3F2 /* Direction.swift in Sources */,
+				ED9E733621BA8259009BA3F2 /* AnimationFactory.swift in Sources */,
+				ED9E732C21BA824B009BA3F2 /* Block.swift in Sources */,
+				ED9E732821BA821C009BA3F2 /* Database.swift in Sources */,
+				ED9E733421BA8256009BA3F2 /* Level.swift in Sources */,
+				ED9E732721BA8211009BA3F2 /* SceneController.swift in Sources */,
+				ED9E733821BA825E009BA3F2 /* TutorialController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1347,7 +1402,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = nl.lovocreations.Blocky;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1365,7 +1420,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = nl.lovocreations.Blocky;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -1385,7 +1440,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = nl.lovocreations.BlockyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Blocky.app/Blocky";
 			};
@@ -1406,7 +1461,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = nl.lovocreations.BlockyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Blocky.app/Blocky";
 			};
@@ -1426,7 +1481,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = nl.lovocreations.BlockyUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = Blocky;
 			};
@@ -1446,7 +1501,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = nl.lovocreations.BlockyUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = Blocky;
 			};
